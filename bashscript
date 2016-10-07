@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt-get -y install git
+echo 'sudo apt-get -y install git' >> .bash_profile
 echo 'git config --global user.name "j-tyler"' >> .bash_profile
 echo 'git config --global user.email "justin.marsh@holbertonschool.com"' >> .bash_profile
 echo 'function parse_git_dirty {' >> .bash_profile
