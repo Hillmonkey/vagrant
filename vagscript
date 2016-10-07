@@ -1,0 +1,6 @@
+#!/bin/bash
+vagrant init ubuntu/trusty64
+echo 'Vagrant.configure("2") do |config|' >> Vagrantfile
+echo '  config.vm.provision "shell", path: "bashscript"' >> Vagrantfile
+echo 'end' >> Vagrantfile
+vagrant up;vagrant ssh
