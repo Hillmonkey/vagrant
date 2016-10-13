@@ -3,6 +3,8 @@ sudo apt-get -y install git
 git config --global user.name "j-tyler"
 git config --global user.email "justin.marsh@holbertonschool.com"
 git clone https://github.com/holbertonschool/Betty.git
+echo 'mkdir -p ~/.vim/colors' >> .bash_profile
+echo 'curl -o ~/.vim/colors/desertEx.vim https://raw.githubusercontent.com/flazz/vim-colorschemes/master/colors/desertEx.vim' >> .bash_profile
 echo 'function parse_git_dirty {' >> .bash_profile
 echo '  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"' >> .bash_profile
 echo '}' >> .bash_profile
@@ -14,3 +16,6 @@ echo 'betty() {' >> .bash_profile
 echo '        ~/Betty/betty-style.pl $1' >> .bash_profile
 echo '        ~/Betty/betty-doc.pl $1' >> .bash_profile
 echo '}' >> .bash_profile
+echo 'colorscheme desertEx' >> .vimrc
+echo 'set tabstop=8 shiftwidth=8' >> .vimrc
+echo 'set autoindent' >> .vimrc
