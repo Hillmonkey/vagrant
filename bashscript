@@ -16,5 +16,8 @@ echo 'betty() {' >> .bash_profile
 echo '        ~/Betty/betty-style.pl $1' >> .bash_profile
 echo '        ~/Betty/betty-doc.pl $1' >> .bash_profile
 echo '}' >> .bash_profile
+echo 'tabstospaces() {' >> .bash_profile
+echo 'find . -name "*.$1" ! -type d -exec bash -c 'ex -c ":%s/\t/    /g" -c ":wq" "$0"' {} \;' >> .bash_profile
+echo '}' >> .bash_profile
 echo 'colorscheme desertEx' >> .vimrc
 echo 'set tabstop=5 shiftwidth=5' >> .vimrc
