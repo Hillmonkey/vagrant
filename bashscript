@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt-get -y install git
-echo 'git config --global user.name "j-tyler"' >> .bash_profile
-echo 'git config --global user.email "justin.marsh@holbertonschool.com"' >> .bash_profile
+echo 'git config --global user.name "Larry Madeo"' >> .bash_profile
+echo 'git config --global user.email "lmadeo76@gmail.com"' >> .bash_profile
 git clone https://github.com/holbertonschool/Betty.git
 echo 'mkdir -p ~/.vim/colors' >> .bash_profile
 echo 'curl -o ~/.vim/colors/desertEx.vim https://raw.githubusercontent.com/flazz/vim-colorschemes/master/colors/desertEx.vim' >> .bash_profile
@@ -20,4 +20,4 @@ echo 'tabstospaces() {' >> .bash_profile
 echo 'find . -name "*.$1" ! -type d -exec bash -c 'ex -c ":%s/\t/    /g" -c ":wq" "$0"' {} \;' >> .bash_profile
 echo '}' >> .bash_profile
 echo 'colorscheme desertEx' >> .vimrc
-echo 'set tabstop=5 shiftwidth=5' >> .vimrc
+echo 'set tabstop=4 shiftwidth=4' >> .vimrc
