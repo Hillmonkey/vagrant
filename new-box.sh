@@ -18,8 +18,6 @@ git clone https://github.com/Hillmonkey/craigslist-checker
 git clone https://github.com/holbertonschool/Betty.git
 
 # Justin's bashrc additions
-echo 'mkdir -p ~/.vim/colors' >> .bashrc
-echo 'curl -o ~/.vim/colors/desertEx.vim https://raw.githubusercontent.com/flazz/vim-colorschemes/master/colors/desertEx.vim' >> .bashrc
 echo 'function parse_git_dirty {' >> .bashrc
 echo '  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"' >> .bashrc
 echo '}' >> .bashrc
@@ -27,6 +25,7 @@ echo 'function parse_git_branch {' >> .bashrc
 echo '  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"' >> .bashrc
 echo '}' >> .bashrc
 echo 'export PS1="\[\033[1;30m\]\u \[\033[0;37m\] \[\033[1;32m\]\w\[\033[0m\]\n\[\033[1;31m\]\$(parse_git_branch) \[\033[0m\]\$ "' >> .bashrc
+
 # echo 'betty() {' >> .bashrc
 # echo '        ~/Betty/betty-style.pl $1' >> .bashrc
 # echo '        ~/Betty/betty-doc.pl $1' >> .bashrc
@@ -39,15 +38,21 @@ echo '# Larry uses vim!' >> .bashrc
 echo 'VISUAL=vim' >> .bashrc
 echo 'EDITOR="$VISUAL"' >> .bashrc
 
-echo '# sensible vimscript additions'
-echo 'colorscheme desertEx' >> .vimrc
+# sensible vimscript additions'
+# not using desertEx yet ...
+echo 'mkdir -p ~/.vim/colors' >> .bashrc
+# echo 'curl -o ~/.vim/colors/desertEx.vim https://raw.githubusercontent.com/flazz/vim-colorschemes/master/colors/desertEx.vim' >> .bashrc
+# echo ' colorscheme desertEx' >> .vimrc
 echo 'set tabstop=4 shiftwidth=4' >> .vimrc
 
-echo '# Larrys bashrc'
+echo '# Larrys bashrc' >> .bashrc
 echo '# Larrys extra editions ################################' >> .bashrc
 echo '# Larrys custom aliases #' >> .bashrc
-echo "alias gzz='gcc -Wall -Wextra -pedantic -g "
+echo "alias gzz='gcc -Wall -Wextra -pedantic -g " >> .bashrc
 
 # Betty installation (repo already cloned above) script
 cd ~/Betty
 sudo ./install.sh
+
+# Go home
+cd ~
