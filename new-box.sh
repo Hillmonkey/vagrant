@@ -6,6 +6,7 @@ sudo apt-get -y update
 sudo apt-get -y install git
 sudo apt-get -y install valgrind
 
+# from now on we assume we're in home directory
 cd ~
 # git settings and repo downloads
 echo 'git config --global user.name "Larry Madeo"' >> .bashrc
@@ -34,11 +35,15 @@ echo 'export PS1="\[\033[1;30m\]\u \[\033[0;37m\] \[\033[1;32m\]\w\[\033[0m\]\n\
 # echo 'find . -name "*.$1" ! -type d -exec bash -c 'ex -c ":%s/\t/    /g" -c ":wq" "$0"' {} \;' >> .bashrc
 # echo '}' >> .bashrc
 
-#sensible vimscript additions
+echo '# Larry uses vim!' >> .bashrc
+echo 'VISUAL=vim' >> .bashrc
+echo 'EDITOR="$VISUAL"' >> .bashrc
+
+echo '# sensible vimscript additions'
 echo 'colorscheme desertEx' >> .vimrc
 echo 'set tabstop=4 shiftwidth=4' >> .vimrc
 
-#Larry's bashrc
+echo '# Larrys bashrc'
 echo '# Larrys extra editions ################################' >> .bashrc
 echo '# Larrys custom aliases #' >> .bashrc
 echo "alias gzz='gcc -Wall -Wextra -pedantic -g "
