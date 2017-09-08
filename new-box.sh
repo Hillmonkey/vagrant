@@ -15,6 +15,7 @@ echo $'git config --global credential.helper \'cache --timeout=86400\'' >> .bash
 echo $'git config --global core.editor \"vim\"' >> .bashrc
 git clone https://github.com/Hillmonkey/holbertonschool-sysadmin_devops
 git clone https://github.com/Hillmonkey/holbertonschool-low_level_programming
+git clone https://github.com/Hillmonkey/holbertonschool-higher_level_programming
 git clone https://github.com/Hillmonkey/printf
 git clone https://github.com/Hillmonkey/craigslist-checker
 git clone https://github.com/holbertonschool/Betty.git
@@ -50,7 +51,7 @@ echo 'set tabstop=4 shiftwidth=4' >> .vimrc
 echo '# Larrys bashrc' >> .bashrc
 echo '# Larrys extra editions ################################' >> .bashrc
 echo '# Larrys custom aliases #' >> .bashrc
-echo "alias gzz='gcc -Wall -Wextra -pedantic -g " >> .bashrc
+echo "alias gzz='gcc -Wall -Wextra -pedantic -g'" >> .bashrc
 
 # Betty installation (repo already cloned above) script
 cd ~/Betty
