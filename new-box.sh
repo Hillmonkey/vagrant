@@ -13,7 +13,7 @@ echo 'git config --global user.name "Larry Madeo"' >> .bashrc
 echo 'git config --global user.email "lmadeo76@gmail.com"' >> .bashrc
 echo $'git config --global credential.helper \'cache --timeout=86400\'' >> .bashrc
 echo $'git config --global core.editor \"vim\"' >> .bashrc
-git clone https://github.com/Hillmonkey/holbertonschool-sysadmin_devops
+git clone https://github.com/Hillmonkey/holberton-system_engineering-devops
 git clone https://github.com/Hillmonkey/holbertonschool-low_level_programming
 git clone https://github.com/Hillmonkey/holbertonschool-higher_level_programming
 git clone https://github.com/Hillmonkey/printf
